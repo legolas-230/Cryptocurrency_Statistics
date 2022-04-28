@@ -1,10 +1,10 @@
 # Cryptocurrency_Statistics
 
-**_Cryptocurrency Statistics_** is a 'not-hosted' website to keep track of your Cryptocurrency gambling. To make it work, you'll have to **download the folder** above the ""README.md" and a text editor (I suggest [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/)). 
+**_Cryptocurrency Statistics_** is a 'not-hosted' website to keep track of your Cryptocurrency gambling. 
 
-After you've done all of this with possible help of a [zip decoder](https://www.winzip.com/en/learn/features/convert-to-pdf/?x-target=ppc&promo=ppc&gclid=CjwKCAjw9qiTBhBbEiwAp-GE0VSSoSjXVivzjtOYHelIMwzbOAw7GP0Gqv5ofccLQ8x6LQM6-3e7HhoCaH4QAvD_BwE), you're going to be almost ready. 
-
-The last thing you'll have to do is **coding a bit**! You'll have to open the "JavaScript" folder (which you'll have automatically downloaded when downloading the whole "Cryptocurrency Statistics" file) and **change a couple of things**. **All you have to do is already explained in the files themselves!**
+1. To make it work, you'll have to **download the folder** above the ""README.md" and a text editor (I suggest [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/)). 
+2. After you've done all of this with possible help of a [zip decoder](https://www.winzip.com/en/learn/features/convert-to-pdf/?x-target=ppc&promo=ppc&gclid=CjwKCAjw9qiTBhBbEiwAp-GE0VSSoSjXVivzjtOYHelIMwzbOAw7GP0Gqv5ofccLQ8x6LQM6-3e7HhoCaH4QAvD_BwE), you're going to be almost ready. 
+3. The last thing you'll have to do is **coding a bit**! You'll have to open the "JavaScript" folder (which you'll have automatically downloaded when downloading the whole "Cryptocurrency Statistics" file) and **change a couple of things**. **All you have to do is already explained in the files themselves!**
 
 
 
