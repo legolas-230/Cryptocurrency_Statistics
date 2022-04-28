@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Ripple statistics </title>
+	<link rel="icon" type="image/x-icon" href="favicon.png">
+	<link rel="stylesheet" href="Ripple.css">
+	<script src="JavaScript/Ripple.js"></script>
+</head>
+<body>
+
+<div class="bitcoin_logo">
+	<img src="Ripple logo.png" style="width: 200px; height: auto;">
+</div>
+
+<p100 class="triangle">
+<a href="Cryptocurrency Statistics.html" style="text-decoration: none; color: #39ff14;"> &#5130 </a>
+</p100>
+
+<p id="bitcoin"></p>
+
+<div id="arrow_up" class="arrow_up">&#8593</div>
+<div id="arrow_down" class="arrow_down">&#8595</div>
+<div id="arrow_up1" class="arrow_up1">&#8593</div>
+<div id="arrow_down1" class="arrow_down1">&#8595</div>
+
+
+
+
+<div class="Weekly_stats">
+	Weekly Statistics:
+	<div class="Weekly_stats_text">
+		Week 1: <p1 id="week1"></p1> <br>
+		Week 2: <p2 id="week2"></p2> <br>
+		Week 3: <p3 id="week3"></p3> <br>
+		Week 4: <p4 id="week4"></p4> <br>
+		Week 5: <p5 id="week5"></p5> <br>
+		Week 6: <p6 id="week6"></p6> <br>
+		Week 7: <p7 id="week7"></p7> <br>
+		Week 8: <p8 id="week8"></p8> <br>
+		Week 9: <p9 id="week9"></p9> <br>
+		Week 10: <p10 id="week10"></p10> <br>
+		Week 11: <p11 id="week11"></p11> <br>
+		Week 12: <p12 id="week12"></p12> <br>
+		Week 13: <p13 id="week13"></p13> <br>
+		Week 14: <p14 id="week14"></p14> <br>
+		Week 15: <p15 id="week15"></p15> <br>
+		Week 16: <p16 id="week16"></p16> <br>
+		Week 17: <p17 id="week17"></p17> <br>
+		Week 18: <p18 id="week18"></p18> <br>
+		Week 19: <p19 id="week19"></p19> <br>
+		Week 20: <p20 id="week20"></p20> <br>
+		Week 21: <p21 id="week21"></p21> <br>
+		Week 22: <p22 id="week22"></p22> <br>
+		Week 23: <p23 id="week23"></p23> <br>
+		Week 24: <p24 id="week24"></p24> <br>
+		Week 25: <p25 id="week25"></p25> <br>
+		Week 26: <p26 id="week26"></p26> <br>
+		Week 27: <p27 id="week27"></p27> <br>
+		Week 28: <p28 id="week28"></p28> <br>
+		Week 29: <p29 id="week29"></p29> <br>
+		Week 30: <p30 id="week30"></p30> <br>
+		Week 31: <p31 id="week31"></p31> <br>
+		Week 32: <p32 id="week32"></p32> <br>
+		Week 33: <p33 id="week33"></p33> <br>
+		Week 34: <p34 id="week34"></p34> <br>
+		Week 35: <p35 id="week35"></p35> <br>
+		Week 36: <p36 id="week36"></p36> <br>
+		Week 37: <p37 id="week37"></p37> <br>
+		Week 38: <p38 id="week38"></p38> <br>
+		Week 39: <p39 id="week39"></p39> <br>
+		Week 40: <p40 id="week40"></p40> <br>
+		Week 41: <p41 id="week41"></p41> <br>
+		Week 42: <p42 id="week42"></p42> <br>
+		Week 43: <p43 id="week43"></p43> <br>
+		Week 44: <p44 id="week44"></p44> <br>
+		Week 45: <p45 id="week45"></p45> <br>
+		Week 46: <p46 id="week46"></p46> <br>
+		Week 47: <p47 id="week47"></p47> <br>
+		Week 48: <p48 id="week48"></p48> <br>
+		Week 49: <p49 id="week49"></p49> <br>
+		Week 50: <p50 id="week50"></p50> <br>
+		Week 51: <p51 id="week51"></p51> <br>
+		Week 52: <p52 id="week52"></p52> <br>
+	</div>
+</div>
+
+
+
+
+
+<div class="chartBox">
+	<canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+<script>
+document.getElementById("bitcoin").innerHTML = (Math.round(Ripple_total * 100000000)/100000000).toFixed(8);
+if (Ripple_total < 0) {
+	document.getElementById("bitcoin").classList.add('negative1')
+	document.getElementById("arrow_down").classList.add('positive_negative');
+	document.getElementById("arrow_down1").classList.add('positive_negative')
+} else {
+		document.getElementById("bitcoin").classList.add('positive1');
+		document.getElementById("arrow_up").classList.add('positive_negative')
+		document.getElementById("arrow_up1").classList.add('positive_negative')
+	}; 
+
+document.getElementById("week1").innerHTML = (Math.round(week1 * 100000000)/100000000).toFixed(8);;
+if (week1 < 0) {
+	document.getElementById("week1").classList.add('negative');
+} else {
+		document.getElementById("week1").classList.add('positive');
+	};
+
+document.getElementById("week2").innerHTML = (Math.round(week2 * 100000000)/100000000).toFixed(8);;
+if (week2 < 0) {
+	document.getElementById("week2").classList.add('negative');
+} else {
+		document.getElementById("week2").classList.add('positive');
+	}
+
+document.getElementById("week3").innerHTML = (Math.round(week3 * 100000000)/100000000).toFixed(8);;
+if (week3 < 0) {
+	document.getElementById("week3").classList.add('negative');
+} else {
+		document.getElementById("week3").classList.add('positive');
+	}
+
+document.getElementById("week4").innerHTML = (Math.round(week4 * 100000000)/100000000).toFixed(8);;
+if (week4 < 0) {
+	document.getElementById("week4").classList.add('negative');
+} else {
+		document.getElementById("week4").classList.add('positive');
+	}
+
+document.getElementById("week5").innerHTML = (Math.round(week5 * 100000000)/100000000).toFixed(8);;
+if (week5 < 0) {
+	document.getElementById("week5").classList.add('negative');
+} else {
+		document.getElementById("week5").classList.add('positive');
+	}
+
+document.getElementById("week6").innerHTML = (Math.round(week6 * 100000000)/100000000).toFixed(8);;
+if (week6 < 0) {
+	document.getElementById("week6").classList.add('negative');
+} else {
+		document.getElementById("week6").classList.add('positive');
+	}
+
+document.getElementById("week7").innerHTML = (Math.round(week7 * 100000000)/100000000).toFixed(8);;
+if (week6 < 0) {
+	document.getElementById("week7").classList.add('negative');
+} else {
+		document.getElementById("week7").classList.add('positive');
+	}
+
+document.getElementById("week8").innerHTML = (Math.round(week8 * 100000000)/100000000).toFixed(8);;
+if (week7 < 0) {
+	document.getElementById("week8").classList.add('negative');
+} else {
+		document.getElementById("week8").classList.add('positive');
+	}
+
+document.getElementById("week9").innerHTML = (Math.round(week9 * 100000000)/100000000).toFixed(8);;
+if (week8 < 0) {
+	document.getElementById("week9").classList.add('negative');
+} else {
+		document.getElementById("week9").classList.add('positive');
+	}
+
+document.getElementById("week10").innerHTML = (Math.round(week10 * 100000000)/100000000).toFixed(8);;
+if (week10 < 0) {
+	document.getElementById("week10").classList.add('negative');
+} else {
+		document.getElementById("week10").classList.add('positive');
+	};
+
+document.getElementById("week11").innerHTML = (Math.round(week11 * 100000000)/100000000).toFixed(8);;
+if (week11 < 0) {
+	document.getElementById("week11").classList.add('negative');
+} else {
+		document.getElementById("week11").classList.add('positive');
+	};
+
+
+document.getElementById("week12").innerHTML = (Math.round(week12 * 100000000)/100000000).toFixed(8);;
+if (week12 < 0) {
+	document.getElementById("week12").classList.add('negative');
+} else {
+		document.getElementById("week12").classList.add('positive');
+	};
+
+
+document.getElementById("week13").innerHTML = (Math.round(week13 * 100000000)/100000000).toFixed(8);;
+if (week13 < 0) {
+	document.getElementById("week13").classList.add('negative');
+} else {
+		document.getElementById("week13").classList.add('positive');
+	};
+
+
+document.getElementById("week14").innerHTML = (Math.round(week14 * 100000000)/100000000).toFixed(8);;
+if (week14 < 0) {
+	document.getElementById("week14").classList.add('negative');
+} else {
+		document.getElementById("week14").classList.add('positive');
+	};
+
+
+document.getElementById("week15").innerHTML = (Math.round(week15 * 100000000)/100000000).toFixed(8);;
+if (week15 < 0) {
+	document.getElementById("week15").classList.add('negative');
+} else {
+		document.getElementById("week15").classList.add('positive');
+	};
+
+
+document.getElementById("week16").innerHTML = (Math.round(week16 * 100000000)/100000000).toFixed(8);;
+if (week16 < 0) {
+	document.getElementById("week16").classList.add('negative');
+} else {
+		document.getElementById("week16").classList.add('positive');
+	};
+
+
+document.getElementById("week17").innerHTML = (Math.round(week17 * 100000000)/100000000).toFixed(8);;
+if (week17 < 0) {
+	document.getElementById("week17").classList.add('negative');
+} else {
+		document.getElementById("week17").classList.add('positive');
+	};
+
+
+document.getElementById("week18").innerHTML = (Math.round(week18 * 100000000)/100000000).toFixed(8);;
+if (week18 < 0) {
+	document.getElementById("week18").classList.add('negative');
+} else {
+		document.getElementById("week18").classList.add('positive');
+	};
+
+
+document.getElementById("week19").innerHTML = (Math.round(week19 * 100000000)/100000000).toFixed(8);;
+if (week19 < 0) {
+	document.getElementById("week19").classList.add('negative');
+} else {
+		document.getElementById("week19").classList.add('positive');
+	};
+
+
+document.getElementById("week20").innerHTML = (Math.round(week20 * 100000000)/100000000).toFixed(8);;
+if (week20 < 0) {
+	document.getElementById("week20").classList.add('negative');
+} else {
+		document.getElementById("week20").classList.add('positive');
+	};
+
+
+document.getElementById("week21").innerHTML = (Math.round(week21 * 100000000)/100000000).toFixed(8);;
+if (week21 < 0) {
+	document.getElementById("week21").classList.add('negative');
+} else {
+		document.getElementById("week21").classList.add('positive');
+	};
+
+
+document.getElementById("week22").innerHTML = (Math.round(week22 * 100000000)/100000000).toFixed(8);;
+if (week22 < 0) {
+	document.getElementById("week22").classList.add('negative');
+} else {
+		document.getElementById("week22").classList.add('positive');
+	};
+
+
+document.getElementById("week23").innerHTML = (Math.round(week23 * 100000000)/100000000).toFixed(8);;
+if (week23 < 0) {
+	document.getElementById("week23").classList.add('negative');
+} else {
+		document.getElementById("week23").classList.add('positive');
+	};
+
+
+document.getElementById("week24").innerHTML = (Math.round(week24 * 100000000)/100000000).toFixed(8);;
+if (week24 < 0) {
+	document.getElementById("week24").classList.add('negative');
+} else {
+		document.getElementById("week24").classList.add('positive');
+	};
+
+
+document.getElementById("week25").innerHTML = (Math.round(week25 * 100000000)/100000000).toFixed(8);;
+if (week25 < 0) {
+	document.getElementById("week25").classList.add('negative');
+} else {
+		document.getElementById("week25").classList.add('positive');
+	};
+
+
+document.getElementById("week26").innerHTML = (Math.round(week26 * 100000000)/100000000).toFixed(8);;
+if (week26 < 0) {
+	document.getElementById("week26").classList.add('negative');
+} else {
+		document.getElementById("week26").classList.add('positive');
+	};
+
+
+document.getElementById("week27").innerHTML = (Math.round(week27 * 100000000)/100000000).toFixed(8);;
+if (week27 < 0) {
+	document.getElementById("week27").classList.add('negative');
+} else {
+		document.getElementById("week27").classList.add('positive');
+	};
+
+
+document.getElementById("week28").innerHTML = (Math.round(week28 * 100000000)/100000000).toFixed(8);;
+if (week28 < 0) {
+	document.getElementById("week28").classList.add('negative');
+} else {
+		document.getElementById("week28").classList.add('positive');
+	};
+
+
+document.getElementById("week29").innerHTML = (Math.round(week29 * 100000000)/100000000).toFixed(8);;
+if (week29 < 0) {
+	document.getElementById("week29").classList.add('negative');
+} else {
+		document.getElementById("week29").classList.add('positive');
+	};
+
+
+document.getElementById("week30").innerHTML = (Math.round(week30 * 100000000)/100000000).toFixed(8);;
+if (week30 < 0) {
+	document.getElementById("week30").classList.add('negative');
+} else {
+		document.getElementById("week30").classList.add('positive');
+	};
+
+
+document.getElementById("week31").innerHTML = (Math.round(week31 * 100000000)/100000000).toFixed(8);;
+if (week31 < 0) {
+	document.getElementById("week31").classList.add('negative');
+} else {
+		document.getElementById("week31").classList.add('positive');
+	};
+
+
+document.getElementById("week32").innerHTML = (Math.round(week32 * 100000000)/100000000).toFixed(8);;
+if (week32 < 0) {
+	document.getElementById("week32").classList.add('negative');
+} else {
+		document.getElementById("week32").classList.add('positive');
+	};
+
+
+document.getElementById("week33").innerHTML = (Math.round(week33 * 100000000)/100000000).toFixed(8);;
+if (week33 < 0) {
+	document.getElementById("week33").classList.add('negative');
+} else {
+		document.getElementById("week33").classList.add('positive');
+	};
+
+
+document.getElementById("week34").innerHTML = (Math.round(week34 * 100000000)/100000000).toFixed(8);;
+if (week34 < 0) {
+	document.getElementById("week34").classList.add('negative');
+} else {
+		document.getElementById("week34").classList.add('positive');
+	};
+
+
+document.getElementById("week35").innerHTML = (Math.round(week35 * 100000000)/100000000).toFixed(8);;
+if (week35 < 0) {
+	document.getElementById("week35").classList.add('negative');
+} else {
+		document.getElementById("week35").classList.add('positive');
+	};
+
+
+document.getElementById("week36").innerHTML = (Math.round(week36 * 100000000)/100000000).toFixed(8);;
+if (week36 < 0) {
+	document.getElementById("week36").classList.add('negative');
+} else {
+		document.getElementById("week36").classList.add('positive');
+	};
+
+document.getElementById("week37").innerHTML = (Math.round(week37 * 100000000)/100000000).toFixed(8);;
+if (week37 < 0) {
+	document.getElementById("week37").classList.add('negative');
+} else {
+		document.getElementById("week37").classList.add('positive');
+	};
+
+document.getElementById("week38").innerHTML = (Math.round(week38 * 100000000)/100000000).toFixed(8);;
+if (week38 < 0) {
+	document.getElementById("week38").classList.add('negative');
+} else {
+		document.getElementById("week38").classList.add('positive');
+	};
+
+document.getElementById("week39").innerHTML = (Math.round(week39 * 100000000)/100000000).toFixed(8);;
+if (week39 < 0) {
+	document.getElementById("week39").classList.add('negative');
+} else {
+		document.getElementById("week39").classList.add('positive');
+	};
+
+document.getElementById("week40").innerHTML = (Math.round(week40 * 100000000)/100000000).toFixed(8);;
+if (week40 < 0) {
+	document.getElementById("week40").classList.add('negative');
+} else {
+		document.getElementById("week40").classList.add('positive');
+	};
+
+document.getElementById("week41").innerHTML = (Math.round(week41 * 100000000)/100000000).toFixed(8);;
+if (week41 < 0) {
+	document.getElementById("week41").classList.add('negative');
+} else {
+		document.getElementById("week41").classList.add('positive');
+	};
+
+document.getElementById("week42").innerHTML = (Math.round(week42 * 100000000)/100000000).toFixed(8);;
+if (week42 < 0) {
+	document.getElementById("week42").classList.add('negative');
+} else {
+		document.getElementById("week42").classList.add('positive');
+	};
+
+document.getElementById("week43").innerHTML = (Math.round(week43 * 100000000)/100000000).toFixed(8);;
+if (week43 < 0) {
+	document.getElementById("week43").classList.add('negative');
+} else {
+		document.getElementById("week43").classList.add('positive');
+	};
+
+document.getElementById("week44").innerHTML = (Math.round(week44 * 100000000)/100000000).toFixed(8);;
+if (week44 < 0) {
+	document.getElementById("week44").classList.add('negative');
+} else {
+		document.getElementById("week44").classList.add('positive');
+	};
+
+document.getElementById("week45").innerHTML = (Math.round(week45 * 100000000)/100000000).toFixed(8);;
+if (week45 < 0) {
+	document.getElementById("week45").classList.add('negative');
+} else {
+		document.getElementById("week45").classList.add('positive');
+	};
+
+document.getElementById("week46").innerHTML = (Math.round(week46 * 100000000)/100000000).toFixed(8);;
+if (week46 < 0) {
+	document.getElementById("week46").classList.add('negative');
+} else {
+		document.getElementById("week46").classList.add('positive');
+	};
+
+document.getElementById("week47").innerHTML = (Math.round(week47 * 100000000)/100000000).toFixed(8);;
+if (week47 < 0) {
+	document.getElementById("week47").classList.add('negative');
+} else {
+		document.getElementById("week47").classList.add('positive');
+	};
+
+document.getElementById("week48").innerHTML = (Math.round(week48 * 100000000)/100000000).toFixed(8);;
+if (week48 < 0) {
+	document.getElementById("week48").classList.add('negative');
+} else {
+		document.getElementById("week48").classList.add('positive');
+	};
+
+document.getElementById("week49").innerHTML = (Math.round(week49 * 100000000)/100000000).toFixed(8);;
+if (week49 < 0) {
+	document.getElementById("week49").classList.add('negative');
+} else {
+		document.getElementById("week49").classList.add('positive');
+	};
+
+document.getElementById("week50").innerHTML = (Math.round(week50 * 100000000)/100000000).toFixed(8);;
+if (week50 < 0) {
+	document.getElementById("week50").classList.add('negative');
+} else {
+		document.getElementById("week50").classList.add('positive');
+	};
+
+document.getElementById("week51").innerHTML = (Math.round(week51 * 100000000)/100000000).toFixed(8);;
+if (week51 < 0) {
+	document.getElementById("week51").classList.add('negative');
+} else {
+		document.getElementById("week51").classList.add('positive');
+	};
+
+document.getElementById("week52").innerHTML = (Math.round(week52 * 100000000)/100000000).toFixed(8);;
+if (week52 < 0) {
+	document.getElementById("week52").classList.add('negative');
+} else {
+		document.getElementById("week52").classList.add('positive');
+	};
+
+
+
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['1', '2', '3', '4', '5', '6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100','101','102','103','104','105','106','107','108','109','110','111','112','113','114','115','116','117','118','119','120','121','122','123','124','125','126','127','128','129','130','131','132','133','134','135','136','137','138','139','140','141','142','143','144','145','146','147','148','149','150','151','152','153','154','155','156','157','158','159','160','161','162','163','164','165','166','167','168','169','170','171','172','173','174','175','176','177','178','179','180','181','182','183','184','185','186','187','188','189','190','191','192','193','194','195','196','197','198','199','200','201','202','203','204','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','233','234','235','236','237','238','239','240','241','242','243','244','245','246','247','248','249','250','251','252','253','254','255','256','257','258','259','260','261','262','263','264','265','266','267','268','269','270','271','272','273','274','275','276','277','278','279','280','281','282','283','284','285','286','287','288','289','290','291','292','293','294','295','296','297','298','299','300','301','302','303','304','305','306','307','308','309','310','311','312','313','314','315','316','317','318','319','320','321','322','323','324','325','326','327','328','329','330','331','332','333','334','335','336','337','338','339','340','341','342','343','344','345','346','347','348','349','350','351','352','353','354','355','356'],
+        datasets: [{
+            label: 'Bitcoin Graph',
+            data: [Day1, Day2, Day3, Day4, Day5, Day6, Day7, Day8, Day9, Day10, Day11, Day12, Day13, Day14, Day15, Day16, Day17, Day18, Day19, Day20, Day21, Day22, Day23, Day24, Day25, Day26, Day27, Day28, Day29, Day30, Day31, Day32, Day33, Day34, Day35, Day36, Day37, Day38, Day39, Day40, Day41, Day42, Day43, Day44, Day45, Day46, Day47, Day48, Day49, Day50, Day51, Day52, Day53, Day54, Day55, Day56, Day57, Day58, Day59, Day60, Day61, Day62, Day63, Day64, Day65, Day66, Day67, Day68, Day69, Day70, Day71, Day72, Day73, Day74, Day75, Day76, Day77, Day78, Day79, Day80, Day81, Day82, Day83, Day84, Day85, Day86, Day87, Day88, Day89, Day90, Day91, Day92, Day93, Day94, Day95, Day96, Day97, Day98, Day99, Day100, Day101, Day102, Day103, Day104, Day105, Day106, Day107, Day108, Day109, Day110, Day111, Day112, Day113, Day114, Day115, Day116, Day117, Day118, Day119, Day120, Day121, Day122, Day123, Day124, Day125, Day126, Day127, Day128, Day129, Day130, Day131, Day132, Day133, Day134, Day135, Day136, Day137, Day138, Day139, Day140, Day141, Day142, Day143, Day144, Day145, Day146, Day147, Day148, Day149, Day150, Day151, Day152, Day153, Day154, Day155, Day156, Day157, Day158, Day159, Day160, Day161, Day162, Day163, Day164, Day165, Day166, Day167, Day168, Day169, Day170, Day171, Day172, Day173, Day174, Day175, Day176, Day177, Day178, Day179, Day180, Day181, Day182, Day183, Day184, Day185, Day186, Day187, Day188, Day189, Day190, Day191, Day192, Day193, Day194, Day195, Day196, Day197, Day198, Day199, Day200, Day201, Day202, Day203, Day204, Day205, Day206, Day207, Day208, Day209, Day210, Day211, Day212, Day213, Day214, Day215, Day216, Day217, Day218, Day219, Day220, Day221, Day222, Day223, Day224, Day225, Day226, Day227, Day228, Day229, Day230, Day231, Day232, Day233, Day234, Day235, Day236, Day237, Day238, Day239, Day240, Day241, Day242, Day243, Day244, Day245, Day246, Day247, Day248, Day249, Day250, Day251, Day252, Day253, Day254, Day255, Day256, Day257, Day258, Day259, Day260, Day261, Day262, Day263, Day264, Day265, Day266, Day267, Day268, Day269, Day270, Day271, Day272, Day273, Day274, Day275, Day276, Day277, Day278, Day279, Day280, Day281, Day282, Day283, Day284, Day285, Day286, Day287, Day288, Day289, Day290, Day291, Day292, Day293, Day294, Day295, Day296, Day297, Day298, Day299, Day300, Day301, Day302, Day303, Day304, Day305, Day306, Day307, Day308, Day309, Day310, Day311, Day312, Day313, Day314, Day315, Day316, Day317, Day318, Day319, Day320, Day321, Day322, Day323, Day324, Day325, Day326, Day327, Day328, Day329, Day330, Day331, Day332, Day333, Day334, Day335, Day336, Day337, Day338, Day339, Day340, Day341, Day342, Day343, Day344, Day345, Day346, Day347, Day348, Day349, Day350, Day351, Day352, Day353, Day354, Day355, Day356, Day357, Day358, Day359, Day360, Day361, Day362, Day363, Day364],
+            backgroundColor: [
+            ],
+            borderColor: [
+                '#39ff14',
+            ],
+            borderWidth: 0.5,
+            tension: 0.4,
+            pointRadius: 0
+        }]
+    },
+    options: {
+        scales: {
+        	x: {
+        		grid: {
+        			color: 'rgba(255,255,255,0.1)',
+        			borderColor: 'rgba(255,255,255,0.1)'
+        		},
+        		ticks: {
+        			color: 'rgba(255,255,255,0.5)'
+        		},
+        	},
+            y: {
+            	grid: {
+            		color: 'rgba(255,255,255,0.1)',
+            		borderColor: 'rgba(255,255,255,0.1)'
+            	},
+            	ticks: {
+            		color: 'rgba(255,255,255,0.5)'
+            	},
+            	beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>

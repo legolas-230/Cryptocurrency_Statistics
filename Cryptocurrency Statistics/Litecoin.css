@@ -1,0 +1,483 @@
+body {
+	background-color: #212121;
+}
+
+
+
+
+
+
+.triangle {
+	width: 20px;
+	height: auto;
+	color: #39ff14;
+	font-size: 60px;
+	margin-left: 20px;
+	text-decoration: none;
+}
+
+
+
+
+.bitcoin_logo {
+	border: none;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	border-radius: 100px;
+
+	width: 200px;
+	height: 200px;
+	transition: 2s;
+}
+
+.bitcoin_logo:hover {
+	transform: rotate(360deg) scale(1.3);
+}
+
+
+
+
+
+p {
+	position: absolute;
+	top: 4%;
+	left: 25%;
+	font-size: 100px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+
+.arrow_up {
+	position: absolute;
+	font-size: 100px;
+	font-family: Franklin Gothic Medium;
+	top: 14%;
+	left: 58%;
+	color: #39ff14;
+	display: none;
+}
+
+.arrow_down {
+	position: absolute;
+	font-size: 100px;
+	font-family: Franklin Gothic Medium;
+	top: 14%;
+	left: 58%;
+	color: #FF3131;
+	display: none;
+}
+
+.arrow_up1 {
+	position: absolute;
+	font-size: 100px;
+	font-family: Franklin Gothic Medium;
+	top: 14%;
+	left: 19%;
+	color: #39ff14;
+	display: none;
+}
+
+.arrow_down1 {
+	position: absolute;
+	font-size: 100px;
+	font-family: Franklin Gothic Medium;
+	top: 14%;
+	left: 19%;
+	color: #FF3131;
+	display: none;
+}
+
+.positive_negative {
+	display: block;
+}
+
+
+
+
+
+
+.Weekly_stats {
+	position: absolute;
+	right: 5%;
+	top: 15%;
+	font-size: 30px;
+    border: 1px solid #39ff14;
+    background: black;
+    padding: 10px;
+    width: 400px;
+    height: 700px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: Franklin Gothic Medium;
+    color: #39ff14;
+    text-decoration: underline;
+}
+
+.Weekly_stats_text {
+	position: absolute;
+	top: 60px;
+	left: 40px;
+	text-decoration: none;
+	line-height: 1.5;
+	column-count: 2;
+	column-gap: 120px;
+	font-size: 16px;
+	color: white;
+}
+
+
+
+
+
+.chartBox {
+	border: 1px solid #39ff14;
+	border-radius: 20px;
+	width: 1000px;
+	height: 500px;
+	position: absolute;
+	left: 90px;
+	top: 360px;
+	padding: 10px;
+	background-color: black;
+}
+
+
+
+
+
+
+p1 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p2 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+
+p3 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p4 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p5 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p6 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p7 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p8 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p9 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p10 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p11 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p12 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p13 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p14 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p15 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p16 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p17 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p18 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p19 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p20 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p21  {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p22 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p23 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p24 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p25 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p26 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p27 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p28 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p29 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p30 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p31 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p32 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p33 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p34 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p35 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p36 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p37 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p38 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p39 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p40 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p41 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p42 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p43 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p44 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p45 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p46 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p47 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p48 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p49 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p50 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p51 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+p52 {
+	position: absolute;
+	font-size: 16px;
+	font-family: Franklin Gothic Medium;
+	color: white;
+}
+
+
+
+
+
+
+.positive {
+	color: green;
+}
+
+.negative {
+	color: red;
+}
+
+.positive1 {
+	color: #39ff14;
+}
+
+.negative1 {
+	color: #FF3131;
+}

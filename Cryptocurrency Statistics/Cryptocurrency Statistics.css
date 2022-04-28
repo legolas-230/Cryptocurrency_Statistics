@@ -1,0 +1,335 @@
+body {
+	background-color: #212121;
+}
+
+
+
+
+
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+
+  position: absolute;
+  left: 1650px;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 1500px;
+  top: 60px;
+
+  background-color: black;
+  min-width: 160px;
+  height: 260px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+  border: 1px solid #39ff14;
+  padding: 7px 7px;
+  text-align: center;
+}
+
+.dropdown-content a {
+    display: inline-block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+
+
+
+p1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #39ff14;
+    top: 10px;
+    font-family: Franklin Gothic Medium;
+    text-decoration: underline;
+}
+
+.configuration_button {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    width: 160px;
+    height: 40px;
+    margin-top: 2px;
+}
+
+.configuration_button:hover {
+    background-color: rgba(50, 50, 50, 0.7);
+    cursor: pointer;
+}
+
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+
+
+
+
+
+.Bitcoin {
+	margin: auto;
+	margin-top: 120px;
+    width: 800px;
+	height: 100px;
+
+	border-style: solid;
+	border-color: #39ff14;
+	border-radius: 20px;
+	background-color: black;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.Bitcoin_number {
+	font-size: 70px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 8px;
+    margin-left: 110px;
+    position: absolute;
+}
+
+.Bitcoin_stats {
+	font-size: 25px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 10px;
+
+    line-height: 1.5;
+
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.Bitcoin:hover {
+	transform: scale(1.1);
+}
+
+
+
+
+
+.Ethereum {
+	margin: auto;
+	margin-top: 30px;
+    width: 800px;
+	height: 100px;
+
+	border-style: solid;
+	border-color: #39ff14;
+	border-radius: 20px;
+	background-color: black;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.Ethereum_number {
+	font-size: 70px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 8px;
+    margin-left: 110px;
+    position: absolute;
+}
+
+.Ethereum_stats {
+	font-size: 25px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 10px;
+
+    line-height: 1.5;
+
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.Ethereum:hover {
+	transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.Litecoin {
+    margin: auto;
+    margin-top: 30px;
+    width: 800px;
+    height: 100px;
+
+    border-style: solid;
+    border-color: #39ff14;
+    border-radius: 20px;
+    background-color: black;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.Litecoin_number {
+    font-size: 70px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 8px;
+    margin-left: 110px;
+    position: absolute;
+}
+
+.Litecoin_stats {
+    font-size: 25px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 10px;
+
+    line-height: 1.5;
+
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.Litecoin:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+.Dogecoin {
+    margin: auto;
+    margin-top: 30px;
+    width: 800px;
+    height: 100px;
+
+    border-style: solid;
+    border-color: #39ff14;
+    border-radius: 20px;
+    background-color: black;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.Dogecoin_number {
+    font-size: 70px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 8px;
+    margin-left: 110px;
+    position: absolute;
+}
+
+.Dogecoin_stats {
+    font-size: 25px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 10px;
+
+    line-height: 1.5;
+
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.Dogecoin:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+.Ripple {
+    margin: auto;
+    margin-top: 30px;
+    width: 800px;
+    height: 100px;
+
+    border-style: solid;
+    border-color: #39ff14;
+    border-radius: 20px;
+    background-color: black;
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.Ripple_number {
+    font-size: 70px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 8px;
+    margin-left: 110px;
+    position: absolute;
+}
+
+.Ripple_stats {
+    font-size: 25px;
+    font-family: Franklin Gothic Medium;
+    color: white;
+    margin-top: 10px;
+
+    line-height: 1.5;
+
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.Ripple:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+.Cryptocurrency_name {
+    top: -100px;
+    font-family: Impact;
+    letter-spacing: 4px;
+    color: #39ff14;
+}
